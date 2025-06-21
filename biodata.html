@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>contact</title>
+</head>
+<style> 
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ce7f87;
+  color: #333;
+}
+
+header {
+  background-color: #eba8a8;
+  color: rgb(153, 80, 86);
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 8px;
+  background-color: #b74b4b;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;  /* no underline */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: none;           /* remove border */
+  border-bottom: none;    /* specifically remove bottom border */
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #963d3d;
+  color: #f0e3e3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-bottom: none;   /* ensure no underline */
+}
+
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+.container {
+  display: flex;
+  min-height: 80vh;
+}
+
+
+
+main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f3dbdb;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "WAWA!!";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color:  #f7d9dc;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Urm..";
+    }
+    21%, 40%{
+        content: "Who I Am ?";
+    }
+   
+}
+
+.subjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.profile-pic img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #aa4c4c;
+}
+.h1-biodata {
+position : absolute ;
+margin-right: 30px; // try tukar px dia sampai gambar tu bergerak
+
+}
+table, th, td {
+  border: 1px solid rgb(86, 128, 73);
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #b3e79f;
+}
+
+footer {
+  background-color: #e99797;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+</style>
+<body>
+
+  <header>
+    <h1>MY BIODATA</h1>
+   
+  </header>
+ <nav>
+            <a href="index.html" > Home</a>
+            <a href="biodata.html"class="active" >Biodata</a>
+            <a href="education.html"  >Education</a>
+            <a href="experience.html" >Experience</a>
+            <a href="gallery.html"   >Gallery</a>
+             <a href="contact.html" >Playlist</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+  <div class="container">
+   
+
+    <main>
+      <section class="welcome">
+        <h3 class="typing-text"> ˚୨ৎ˚ <span></span></h3>
+    
+    <div class="biodata-card">
+    <div class="profile-pic">
+      <img src="C:\Users\User\Downloads\Telegram Desktop\me2.jpg" alt="Profile Picture">
+    </div>
+    
+    <h2>NUR ZAHAWAHEEDA BINTI ZAINAL BAHRI</h2>
+
+
+<table style="width:100%">
+  <tr>
+    <th>ABOUT</th>
+    <th>INFO</th> 
+    
+  </tr>
+  <tr>
+    <td>AGE</td>
+    <td>21 YEARS OLD</td>
+   
+  </tr>
+  <tr>
+    <td>DATE OF BIRTH</td>
+    <td>7 NOVEMBER 2004</td>
+    
+  </tr>
+  <tr>
+    <td>EMAIL</td>
+    <td>zahawaheedazainal@gmail.com</td>
+    
+  </tr>
+  <tr>
+    <td>PHONE NUMBER</td>
+    <td>+60 13-9692133</td>
+    
+  </tr>
+  <tr>
+    <td>ADDRESS</td>
+    <td>JOHOR BAHRU, JOHOR </td>
+    
+  </tr>
+  <tr>
+    <td>HOBBIES</td>
+    <td>PLAYING BASKETBALL, READING AND LISTEN TO MUSIC</td>
+    
+  </tr>
+</table>
+</br>
+  </div>
+  <footer>
+    <p>&copy; 2025 NUR ZAHAWAHEEDA. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>education</title>
+</head>
+<style> 
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ce7f87;
+  color: #333;
+}
+
+header {
+  background-color: #eba8a8;
+  color: rgb(153, 80, 86);
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 8px;
+  background-color: #b74b4b;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;  /* no underline */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: none;           /* remove border */
+  border-bottom: none;    /* specifically remove bottom border */
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #963d3d;
+  color: #f0e3e3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border-bottom: none;   /* ensure no underline */
+}
+
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+.container {
+  display: flex;
+  min-height: 80vh;
+}
+
+
+main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f3dbdb;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color:  #fadbe0;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Welcome";
+    }
+    21%, 40%{
+        content: "To My";
+    }
+    41%, 60%{
+        content: "Gallery";
+    }
+}
+
+.subjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+  
+
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      background-color: #baebae;
+      border: 2px solid #566e4a;
+      border-radius: 10px;
+      padding: 10px;
+      width: 180px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+
+footer {
+  background-color: #e99797;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+</style>
+<body>
+
+  <header>
+    <h1>MY GALLERY</h1>
+  
+  </header>
+ <nav>
+            <a href="index.html" > Home</a>
+            <a href="biodata.html" >Biodata</a>
+            <a href="education.html" >Education</a>
+            <a href="experience.html" >Experience</a>
+             <a href="gallery.html" class="active"  >Gallery</a>
+             <a href="playlist.html">Playlist</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+  <div class="container">
+   
+
+    <main>
+      <section class="welcome">
+        <h3 class="typing-text"> ˙⋆.˚✮📷✮˚.⋆˚ <span></span></h3>
+       
+      </section>
+
+      <section class="subjects">
+      
+         <div class="gallery-container">
+
+    <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\me4.jpg" alt="Picture 1">
+      <div class="caption">MY PICTURE</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\chickey2.jpg" alt="Picture 1">
+      <div class="caption">MY CAT</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\family.jpg" alt="Picture 1">
+      <div class="caption">MY FAMILY</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\bestie.jpg" alt="Picture 1">
+      <div class="caption">MY BESTFRIEND</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\bb.jpg" alt="Picture 1">
+      <div class="caption">GIRLS BASKETBALL TEAM</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\siblings.jpg" alt="Picture 1">
+      <div class="caption">MY SIBLINGS</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\kira.jpg" alt="Picture 1">
+      <div class="caption">MY BESTFRIEND</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\jk.jpg" alt="Picture 1">
+      <div class="caption">GOING TO JIWA KACAU 2024</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\ss.jpg" alt="Picture 1">
+      <div class="caption">SUNSET</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\karisma.jpg" alt="Picture 1">
+      <div class="caption">KARISMA 2024</div>
+    </div>
+     <div class="gallery-item">
+      <img src="C:\Users\User\Downloads\cm.jpg" alt="Picture 1">
+      <div class="caption">MY CLASSMATE</div>
+    </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 NUR ZAHAWAHEEDA. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+</body>
+</html>
